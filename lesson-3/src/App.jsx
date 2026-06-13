@@ -1,5 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+
+import List from "./components/List/List";
+import User from "./components/User/User";
+import Posts from "./components/Posts/Posts";
 
 export default function App() {
-  return <></>;
+  const [showList, setShowList] = useState(true);
+  const [showUser, setShowUser] = useState(true);
+
+  const removeList = () => setShowList(false);
+  const removeUser = () => setShowUser(false);
+
+  return (
+    <>
+      {/* {showList && <List removeComponent={removeList} />} */}
+      {/* {showUser && <User removeComponent={removeUser} />} */}
+      <Posts />
+    </>
+  );
 }
